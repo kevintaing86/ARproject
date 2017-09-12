@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,22 +22,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG7-J6-WRp">
-                                <rect key="frame" x="147" y="323" width="80" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="Y5r-tr-I4A"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eyk-Zz-haI">
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WG7-J6-WRp" firstAttribute="centerY" secondItem="mSs-ug-qiY" secondAttribute="centerY" id="5Or-MH-YAv"/>
-                            <constraint firstItem="WG7-J6-WRp" firstAttribute="centerX" secondItem="mSs-ug-qiY" secondAttribute="centerX" id="S6G-Kv-NVr"/>
+                            <constraint firstItem="eyk-Zz-haI" firstAttribute="leading" secondItem="mSs-ug-qiY" secondAttribute="leadingMargin" id="ZYE-ug-fx9"/>
+                            <constraint firstItem="eyk-Zz-haI" firstAttribute="trailing" secondItem="mSs-ug-qiY" secondAttribute="trailingMargin" id="ead-y1-P7c"/>
+                            <constraint firstAttribute="bottom" secondItem="eyk-Zz-haI" secondAttribute="bottom" constant="20" symbolic="YES" id="mBw-gV-aTd"/>
+                            <constraint firstItem="eyk-Zz-haI" firstAttribute="top" secondItem="hJi-rL-qXT" secondAttribute="bottom" constant="8" symbolic="YES" id="sck-Bh-2Wc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="eyk-Zz-haI" id="Zd3-Xp-IFs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9d-aJ-4os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
