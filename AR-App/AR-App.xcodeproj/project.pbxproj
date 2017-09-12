@@ -12,6 +12,8 @@
 		A13944DF1F5B3A2D0066BF4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13944DD1F5B3A2D0066BF4C /* Main.storyboard */; };
 		A13944E11F5B3A2D0066BF4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13944E01F5B3A2D0066BF4C /* Assets.xcassets */; };
 		A13944E41F5B3A2D0066BF4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13944E21F5B3A2D0066BF4C /* LaunchScreen.storyboard */; };
+		A1D174CE1F677FE600EA675E /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D174CD1F677FE600EA675E /* MapView.storyboard */; };
+		A1D174D01F6780E500EA675E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D174CF1F6780E500EA675E /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A13944E01F5B3A2D0066BF4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A13944E31F5B3A2D0066BF4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A13944E51F5B3A2D0066BF4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1D174CD1F677FE600EA675E /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		A1D174CF1F6780E500EA675E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				A13944DD1F5B3A2D0066BF4C /* Main.storyboard */,
+				A1D174CD1F677FE600EA675E /* MapView.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -47,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				A10C6E8B1F64B2A900889650 /* HomeViewController.swift */,
+				A1D174CF1F6780E500EA675E /* MapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 			files = (
 				A13944E41F5B3A2D0066BF4C /* LaunchScreen.storyboard in Resources */,
 				A13944E11F5B3A2D0066BF4C /* Assets.xcassets in Resources */,
+				A1D174CE1F677FE600EA675E /* MapView.storyboard in Resources */,
 				A13944DF1F5B3A2D0066BF4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13944DA1F5B3A2D0066BF4C /* AppDelegate.swift in Sources */,
+				A1D174D01F6780E500EA675E /* MapViewController.swift in Sources */,
 				A10C6E8C1F64B2A900889650 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
