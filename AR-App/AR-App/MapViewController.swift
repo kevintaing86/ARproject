@@ -15,12 +15,14 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         
         let location = CLLocation(latitude: 33.5843, longitude: -101.8783)
         let regionRadius: CLLocationDistance = 1000
+        let geocache = GeoCache(title: "CS Building", subtitle: "Click here", coordinate: CLLocationCoordinate2D(latitude: 33.5875, longitude: -101.8757))
         
         centerMapAtLocation(location: location, with: regionRadius)
-
+        mapView.addAnnotation(geocache)
     }
     
     func centerMapAtLocation(location: CLLocation, with regionRadius: CLLocationDistance) {
@@ -28,5 +30,4 @@ class MapViewController: UIViewController {
         
         self.mapView.setRegion(coordinateLocation, animated: true)
     }
-
 }
