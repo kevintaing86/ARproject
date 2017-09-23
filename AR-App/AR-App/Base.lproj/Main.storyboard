@@ -13,7 +13,7 @@
         <!--HomePage-->
         <scene sceneID="aqo-2B-k1Z">
             <objects>
-                <viewController title="HomePage" id="upl-kr-9jR" customClass="HomeViewController" customModule="AR_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePage" title="HomePage" id="upl-kr-9jR" customClass="HomeViewController" customModule="AR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="44a-WF-6U8"/>
                         <viewControllerLayoutGuide type="bottom" id="zO1-OV-NHw"/>
@@ -57,11 +57,20 @@
                     </view>
                     <connections>
                         <outlet property="mapButton" destination="5ch-EY-SAY" id="QCX-0Y-m7g"/>
+                        <segue destination="4sb-ph-FYO" kind="show" identifier="toMapView" id="J2r-VY-Iwr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dT4-9p-anQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-252" y="-178.56071964017991"/>
+        </scene>
+        <!--MapView-->
+        <scene sceneID="L3Z-Nu-THu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MapViewReference" storyboardName="MapView" id="4sb-ph-FYO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3em-A5-QFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="-179"/>
         </scene>
     </scenes>
 </document>
