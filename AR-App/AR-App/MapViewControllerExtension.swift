@@ -11,25 +11,33 @@ import MapKit
 
 extension MapViewController : MKMapViewDelegate {
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? GeoCache {
-            let identifier = "pin"
-            var view: MKPinAnnotationView
-            
-            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            }
-            else {
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                //view.rightCalloutAccessoryView = UIButton.button
-            }
-            
-            return view
-        }
-        return nil
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let visibleRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 10000, 10000)
+        self.mapView.setRegion(self.mapView.regionThatFits(visibleRegion), animated: true)
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {return nil}
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "pin")
+        
+        if annotationView == nil {
+            annotationView = CustomPinAnnotation(annotation: annotation, reuseIdentifier: "pin")
+            (annotationView as! CustomPinAnnotation).calloutDelegate = self
+        }
+        else {
+            annotationView?.annotation = annotation
+        }
+        
+        return annotationView
+    }
 }
+
+
+
+
+
+
+
+
+
+

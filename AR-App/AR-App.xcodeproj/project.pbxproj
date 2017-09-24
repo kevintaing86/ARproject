@@ -16,6 +16,10 @@
 		A1A2CED51F69A5BB00BFCAAA /* GeoCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A2CED41F69A5BB00BFCAAA /* GeoCache.swift */; };
 		A1D174CE1F677FE600EA675E /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D174CD1F677FE600EA675E /* MapView.storyboard */; };
 		A1D174D01F6780E500EA675E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D174CF1F6780E500EA675E /* MapViewController.swift */; };
+		A1D704041F7709CA0025BB36 /* ARView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D704031F7709CA0025BB36 /* ARView.storyboard */; };
+		A1D704071F772CEA0025BB36 /* AnnotationPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */; };
+		A1D704091F772F1E0025BB36 /* AnnotationPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */; };
+		A1D7040D1F7754A20025BB36 /* CustomPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7040C1F7754A20025BB36 /* CustomPinAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		A1A2CED41F69A5BB00BFCAAA /* GeoCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCache.swift; sourceTree = "<group>"; };
 		A1D174CD1F677FE600EA675E /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		A1D174CF1F6780E500EA675E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A1D704031F7709CA0025BB36 /* ARView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARView.storyboard; sourceTree = "<group>"; };
+		A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationPopoverView.xib; sourceTree = "<group>"; };
+		A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPopoverView.swift; sourceTree = "<group>"; };
+		A1D7040C1F7754A20025BB36 /* CustomPinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPinAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,7 @@
 			children = (
 				A13944DD1F5B3A2D0066BF4C /* Main.storyboard */,
 				A1D174CD1F677FE600EA675E /* MapView.storyboard */,
+				A1D704031F7709CA0025BB36 /* ARView.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -65,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A13842621F6DC07800353C0F /* MapViewControllerExtension.swift */,
+				A1D7040C1F7754A20025BB36 /* CustomPinAnnotation.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -88,6 +98,7 @@
 		A13944D81F5B3A2D0066BF4C /* AR-App */ = {
 			isa = PBXGroup;
 			children = (
+				A1D704051F772CD60025BB36 /* Nibs */,
 				A13842611F6DC04900353C0F /* Extensions */,
 				A1A2CED31F69A56B00BFCAAA /* Models */,
 				A10C6E8A1F64B24B00889650 /* Controllers */,
@@ -106,6 +117,15 @@
 				A1A2CED41F69A5BB00BFCAAA /* GeoCache.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		A1D704051F772CD60025BB36 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */,
+				A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */,
+			);
+			name = Nibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13944E41F5B3A2D0066BF4C /* LaunchScreen.storyboard in Resources */,
+				A1D704071F772CEA0025BB36 /* AnnotationPopoverView.xib in Resources */,
 				A13944E11F5B3A2D0066BF4C /* Assets.xcassets in Resources */,
+				A1D704041F7709CA0025BB36 /* ARView.storyboard in Resources */,
 				A1D174CE1F677FE600EA675E /* MapView.storyboard in Resources */,
 				A13944DF1F5B3A2D0066BF4C /* Main.storyboard in Resources */,
 			);
@@ -182,9 +204,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D7040D1F7754A20025BB36 /* CustomPinAnnotation.swift in Sources */,
 				A13944DA1F5B3A2D0066BF4C /* AppDelegate.swift in Sources */,
 				A1D174D01F6780E500EA675E /* MapViewController.swift in Sources */,
 				A13842631F6DC07800353C0F /* MapViewControllerExtension.swift in Sources */,
+				A1D704091F772F1E0025BB36 /* AnnotationPopoverView.swift in Sources */,
 				A1A2CED51F69A5BB00BFCAAA /* GeoCache.swift in Sources */,
 				A10C6E8C1F64B2A900889650 /* HomeViewController.swift in Sources */,
 			);

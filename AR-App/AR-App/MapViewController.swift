@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, AnnotationPopoverDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
 
@@ -19,7 +19,7 @@ class MapViewController: UIViewController {
         
         let location = CLLocation(latitude: 33.5843, longitude: -101.8783)
         let regionRadius: CLLocationDistance = 1000
-        let geocache = GeoCache(title: "CS Building", subtitle: "Click here", coordinate: CLLocationCoordinate2D(latitude: 33.5875, longitude: -101.8757))
+        let geocache = GeoCache(title: "CS Building", subtitle: "", coordinate: CLLocationCoordinate2D(latitude: 33.5875, longitude: -101.8757))
         
         centerMapAtLocation(location: location, with: regionRadius)
         mapView.addAnnotation(geocache)
@@ -29,5 +29,9 @@ class MapViewController: UIViewController {
         let coordinateLocation = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         
         self.mapView.setRegion(coordinateLocation, animated: true)
+    }
+    
+    func goButtonClicked() {
+        self.performSegue(withIdentifier: "toARView", sender: nil)
     }
 }

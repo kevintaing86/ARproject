@@ -8,14 +8,21 @@
 
 import UIKit
 
+protocol AnnotationPopoverDelegate: class {
+    func goButtonClicked()
+}
+
 class AnnotationPopoverView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var goButton: UIButton!
+    var delegate: AnnotationPopoverDelegate?
+    
+    @IBAction func goButtonClicked(_ sender: Any) {
+        self.delegate?.goButtonClicked()
     }
-    */
-
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }
