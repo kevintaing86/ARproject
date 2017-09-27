@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="4352" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,26 +13,31 @@
         <!--ARView-->
         <scene sceneID="2hV-Cf-Dui">
             <objects>
-                <viewController storyboardIdentifier="ARView" title="ARView" id="Ybw-mr-L8e" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARView" title="ARView" id="Ybw-mr-L8e" customClass="ARViewController" customModule="AR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P8V-rr-e5C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62j-F3-r2U">
-                                <rect key="frame" x="166" y="157" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-xL-3BO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hfB-xL-3BO" firstAttribute="top" secondItem="P8V-rr-e5C" secondAttribute="top" id="3ru-7R-zYx"/>
+                            <constraint firstItem="hfB-xL-3BO" firstAttribute="bottom" secondItem="8hi-7c-tSc" secondAttribute="bottom" id="6iU-cR-F3Q"/>
+                            <constraint firstItem="hfB-xL-3BO" firstAttribute="leading" secondItem="P8V-rr-e5C" secondAttribute="leading" id="FGp-hP-Rwp"/>
+                            <constraint firstAttribute="trailing" secondItem="hfB-xL-3BO" secondAttribute="trailing" id="aws-Xd-u8W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8hi-7c-tSc"/>
                     </view>
+                    <connections>
+                        <outlet property="arScene" destination="hfB-xL-3BO" id="cuv-at-Q6f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Um-rZ-Adb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-110" y="182"/>
+            <point key="canvasLocation" x="-111.2" y="181.25937031484258"/>
         </scene>
     </scenes>
 </document>
