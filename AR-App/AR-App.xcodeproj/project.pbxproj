@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A10C6E8C1F64B2A900889650 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C6E8B1F64B2A900889650 /* HomeViewController.swift */; };
+		A10EEA531F82B22A00C03EBA /* capsule.scn in Resources */ = {isa = PBXBuildFile; fileRef = A10EEA521F82B22A00C03EBA /* capsule.scn */; };
 		A13842631F6DC07800353C0F /* MapViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13842621F6DC07800353C0F /* MapViewControllerExtension.swift */; };
 		A13944DA1F5B3A2D0066BF4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13944D91F5B3A2D0066BF4C /* AppDelegate.swift */; };
 		A13944DF1F5B3A2D0066BF4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13944DD1F5B3A2D0066BF4C /* Main.storyboard */; };
@@ -21,10 +22,12 @@
 		A1D704071F772CEA0025BB36 /* AnnotationPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */; };
 		A1D704091F772F1E0025BB36 /* AnnotationPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */; };
 		A1D7040D1F7754A20025BB36 /* CustomPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7040C1F7754A20025BB36 /* CustomPinAnnotation.swift */; };
+		A1DAD3DD1F89638300D817A2 /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DAD3DC1F89638300D817A2 /* Capsule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A10C6E8B1F64B2A900889650 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A10EEA521F82B22A00C03EBA /* capsule.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = capsule.scn; sourceTree = "<group>"; };
 		A13842621F6DC07800353C0F /* MapViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerExtension.swift; sourceTree = "<group>"; };
 		A13944D61F5B3A2D0066BF4C /* AR-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13944D91F5B3A2D0066BF4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationPopoverView.xib; sourceTree = "<group>"; };
 		A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPopoverView.swift; sourceTree = "<group>"; };
 		A1D7040C1F7754A20025BB36 /* CustomPinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPinAnnotation.swift; sourceTree = "<group>"; };
+		A1DAD3DC1F89638300D817A2 /* Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +129,10 @@
 		A1D704051F772CD60025BB36 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				A10EEA521F82B22A00C03EBA /* capsule.scn */,
 				A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */,
 				A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */,
+				A1DAD3DC1F89638300D817A2 /* Capsule.swift */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 				A1D704071F772CEA0025BB36 /* AnnotationPopoverView.xib in Resources */,
 				A13944E11F5B3A2D0066BF4C /* Assets.xcassets in Resources */,
 				A1D704041F7709CA0025BB36 /* ARView.storyboard in Resources */,
+				A10EEA531F82B22A00C03EBA /* capsule.scn in Resources */,
 				A1D174CE1F677FE600EA675E /* MapView.storyboard in Resources */,
 				A13944DF1F5B3A2D0066BF4C /* Main.storyboard in Resources */,
 			);
@@ -208,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D7040D1F7754A20025BB36 /* CustomPinAnnotation.swift in Sources */,
+				A1DAD3DD1F89638300D817A2 /* Capsule.swift in Sources */,
 				A13944DA1F5B3A2D0066BF4C /* AppDelegate.swift in Sources */,
 				A1D174D01F6780E500EA675E /* MapViewController.swift in Sources */,
 				A15459BE1F7B5F57006B9CC0 /* ARViewController.swift in Sources */,

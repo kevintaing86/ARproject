@@ -14,6 +14,7 @@ class ARViewController: UIViewController {
     
     
     @IBOutlet weak var arScene: ARSCNView!
+    @IBOutlet weak var locationLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -28,6 +29,22 @@ class ARViewController: UIViewController {
         
         let configuration = ARWorldTrackingConfiguration()
         arScene.session.run(configuration)
+        
+        loadCapsule()
+    }
+    
+    func loadCapsule() {
+        let xPos = randomPosition(lowerBound: -1.5, upperBound: 1.5)
+        let yPos = randomPosition(lowerBound: -0.5, upperBound: 0.5)
+        let capsule = Capsule()
+        capsule.loadModal()
+        
+        capsule.position = SCNVector3(xPos, yPos, -2)
+        arScene.scene.rootNode.addChildNode(capsule)
+    }
+    
+    func randomPosition(lowerBound lower: Float, upperBound upper: Float) -> Float {
+        return Float(arc4random()) / Float(UInt32.max) * (lower - upper) + upper
     }
     
 }
