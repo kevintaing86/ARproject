@@ -15,6 +15,7 @@
 		A13944E11F5B3A2D0066BF4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13944E01F5B3A2D0066BF4C /* Assets.xcassets */; };
 		A13944E41F5B3A2D0066BF4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13944E21F5B3A2D0066BF4C /* LaunchScreen.storyboard */; };
 		A15459BE1F7B5F57006B9CC0 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15459BD1F7B5F57006B9CC0 /* ARViewController.swift */; };
+		A19A63541F8C7EDC00308DEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19A63531F8C7EDC00308DEA /* CoreLocation.framework */; };
 		A1A2CED51F69A5BB00BFCAAA /* GeoCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A2CED41F69A5BB00BFCAAA /* GeoCache.swift */; };
 		A1D174CE1F677FE600EA675E /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D174CD1F677FE600EA675E /* MapView.storyboard */; };
 		A1D174D01F6780E500EA675E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D174CF1F6780E500EA675E /* MapViewController.swift */; };
@@ -36,6 +37,7 @@
 		A13944E31F5B3A2D0066BF4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A13944E51F5B3A2D0066BF4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15459BD1F7B5F57006B9CC0 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		A19A63531F8C7EDC00308DEA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A1A2CED41F69A5BB00BFCAAA /* GeoCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCache.swift; sourceTree = "<group>"; };
 		A1D174CD1F677FE600EA675E /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		A1D174CF1F6780E500EA675E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19A63541F8C7EDC00308DEA /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +94,7 @@
 			children = (
 				A13944D81F5B3A2D0066BF4C /* AR-App */,
 				A13944D71F5B3A2D0066BF4C /* Products */,
+				A19A63521F8C7EDC00308DEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +120,14 @@
 				A13944E51F5B3A2D0066BF4C /* Info.plist */,
 			);
 			path = "AR-App";
+			sourceTree = "<group>";
+		};
+		A19A63521F8C7EDC00308DEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A19A63531F8C7EDC00308DEA /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A1A2CED31F69A56B00BFCAAA /* Models */ = {

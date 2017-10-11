@@ -20,14 +20,14 @@ class CustomPinAnnotation: MKPinAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
         self.canShowCallout = false // this is to prevent the default MK bubble to show
-        self.image = UIImage(named: "PinIcon")!
+        //self.image = UIImage(named: "PinIcon")!
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.canShowCallout = false // this is to prevent the default MK bubble to show
-        self.image = UIImage(named: "PinIcon")!
+        //self.image = UIImage(named: "PinIcon")!
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -44,5 +44,7 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>Use AR capabilities</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>AR-App Would like to use your current location</string>
 </dict>
 </plist>
