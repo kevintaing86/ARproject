@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ybw-mr-L8e">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4352" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="2hV-Cf-Dui">
+            <objects>
+                <viewController storyboardIdentifier="ARView" title="ARView" id="Ybw-mr-L8e" customClass="ARViewController" customModule="AR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P8V-rr-e5C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-xL-3BO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-FA-dFb">
+                                <rect key="frame" x="0.0" y="612" width="375" height="55"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H0w-FA-dFb" firstAttribute="bottom" secondItem="8hi-7c-tSc" secondAttribute="bottom" id="28C-8g-u57"/>
+                            <constraint firstItem="H0w-FA-dFb" firstAttribute="leading" secondItem="hfB-xL-3BO" secondAttribute="leading" id="6lU-84-nC5"/>
+                            <constraint firstItem="hfB-xL-3BO" firstAttribute="leading" secondItem="P8V-rr-e5C" secondAttribute="leading" id="8fQ-tj-asa"/>
+                            <constraint firstItem="H0w-FA-dFb" firstAttribute="trailing" secondItem="hfB-xL-3BO" secondAttribute="trailing" id="9md-H3-Wjx"/>
+                            <constraint firstAttribute="trailing" secondItem="hfB-xL-3BO" secondAttribute="trailing" id="BpJ-qT-syb"/>
+                            <constraint firstItem="8hi-7c-tSc" firstAttribute="bottom" secondItem="hfB-xL-3BO" secondAttribute="bottom" constant="63" id="f4z-8Y-S6f"/>
+                            <constraint firstItem="H0w-FA-dFb" firstAttribute="top" secondItem="hfB-xL-3BO" secondAttribute="bottom" constant="8" symbolic="YES" id="q0I-Vj-Lce"/>
+                            <constraint firstItem="hfB-xL-3BO" firstAttribute="top" secondItem="P8V-rr-e5C" secondAttribute="top" id="zIY-r4-TUQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8hi-7c-tSc"/>
+                    </view>
+                    <connections>
+                        <outlet property="arScene" destination="hfB-xL-3BO" id="cuv-at-Q6f"/>
+                        <outlet property="locationLabel" destination="H0w-FA-dFb" id="UIQ-r5-UQm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Um-rZ-Adb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111.2" y="181.25937031484258"/>
+        </scene>
+    </scenes>
+</document>
