@@ -7,15 +7,15 @@
 //
 
 import UIKit
+import MapKit
 import ARKit
 
 @available(iOS 11.0, *)
-class ARViewController: UIViewController {
-    
+class ARViewController: UIViewController, UserLocationDelegate{
     
     @IBOutlet weak var arScene: ARSCNView!
     @IBOutlet weak var locationLabel: UILabel!
-    
+    var userLocation: CLLocation = CLLocation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +46,10 @@ class ARViewController: UIViewController {
     func randomPosition(lowerBound lower: Float, upperBound upper: Float) -> Float {
         return Float(arc4random()) / Float(UInt32.max) * (lower - upper) + upper
     }
+    
+    func updateUserLocation(newLocation: CLLocation) {
+        userLocation = newLocation
+    }
+
     
 }

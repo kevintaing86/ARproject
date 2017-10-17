@@ -11,11 +11,17 @@ import UIKit
 import MapKit
 import CoreLocation
 
+// This is used to send user location data to another view controller
+protocol UserLocationDelegate: class {
+    func updateUserLocation(newLocation: CLLocation)
+}
+
 class MapViewController: UIViewController, AnnotationPopoverDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     var userLocation = CLLocation()
+    var arDelegate: UserLocationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,5 +55,7 @@ class MapViewController: UIViewController, AnnotationPopoverDelegate, CLLocation
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let currentLocation = locations[0]
         self.userLocation = currentLocation
+        
+        self.arDelegate?.updateUserLocation(newLocation: currentLocation)
     }
 }
