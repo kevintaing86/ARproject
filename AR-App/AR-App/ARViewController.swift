@@ -14,7 +14,6 @@ import ARKit
 class ARViewController: UIViewController, UserLocationDelegate{
     
     @IBOutlet weak var arScene: ARSCNView!
-    @IBOutlet weak var locationLabel: UILabel!
     var userLocation: CLLocation = CLLocation()
     
     override func viewDidLoad() {
@@ -33,13 +32,24 @@ class ARViewController: UIViewController, UserLocationDelegate{
         loadCapsule()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let location = touch.location(in: arScene)
+            let hitList = arScene.hitTest(location, options: nil)
+            
+            if let hitObject = hitList.first {
+                arScene.overlaySKScene = arMenu(size: self.view.bounds.size)
+            }
+        }
+    }
+    
     func loadCapsule() {
         let xPos = randomPosition(lowerBound: -1.5, upperBound: 1.5)
-        let yPos = randomPosition(lowerBound: -0.5, upperBound: 0.5)
+        let yPos = randomPosition(lowerBound: -1, upperBound: -2)
         let capsule = Capsule()
         capsule.loadModal()
         
-        capsule.position = SCNVector3(xPos, yPos, -2)
+        capsule.position = SCNVector3(xPos, yPos, -5)
         arScene.scene.rootNode.addChildNode(capsule)
     }
     
@@ -49,6 +59,7 @@ class ARViewController: UIViewController, UserLocationDelegate{
     
     func updateUserLocation(newLocation: CLLocation) {
         userLocation = newLocation
+        print("hi")
     }
 
     

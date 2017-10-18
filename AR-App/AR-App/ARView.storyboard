@@ -19,32 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-xL-3BO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-FA-dFb">
-                                <rect key="frame" x="0.0" y="612" width="375" height="55"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="H0w-FA-dFb" firstAttribute="bottom" secondItem="8hi-7c-tSc" secondAttribute="bottom" id="28C-8g-u57"/>
-                            <constraint firstItem="H0w-FA-dFb" firstAttribute="leading" secondItem="hfB-xL-3BO" secondAttribute="leading" id="6lU-84-nC5"/>
-                            <constraint firstItem="hfB-xL-3BO" firstAttribute="leading" secondItem="P8V-rr-e5C" secondAttribute="leading" id="8fQ-tj-asa"/>
-                            <constraint firstItem="H0w-FA-dFb" firstAttribute="trailing" secondItem="hfB-xL-3BO" secondAttribute="trailing" id="9md-H3-Wjx"/>
-                            <constraint firstAttribute="trailing" secondItem="hfB-xL-3BO" secondAttribute="trailing" id="BpJ-qT-syb"/>
-                            <constraint firstItem="8hi-7c-tSc" firstAttribute="bottom" secondItem="hfB-xL-3BO" secondAttribute="bottom" constant="63" id="f4z-8Y-S6f"/>
-                            <constraint firstItem="H0w-FA-dFb" firstAttribute="top" secondItem="hfB-xL-3BO" secondAttribute="bottom" constant="8" symbolic="YES" id="q0I-Vj-Lce"/>
-                            <constraint firstItem="hfB-xL-3BO" firstAttribute="top" secondItem="P8V-rr-e5C" secondAttribute="top" id="zIY-r4-TUQ"/>
+                            <constraint firstAttribute="trailing" secondItem="hfB-xL-3BO" secondAttribute="trailing" id="Ynj-au-w3I"/>
+                            <constraint firstItem="hfB-xL-3BO" firstAttribute="top" secondItem="P8V-rr-e5C" secondAttribute="top" id="dtu-va-z5W"/>
+                            <constraint firstItem="hfB-xL-3BO" firstAttribute="leading" secondItem="P8V-rr-e5C" secondAttribute="leading" id="k7O-m3-gFx"/>
+                            <constraint firstItem="hfB-xL-3BO" firstAttribute="bottom" secondItem="8hi-7c-tSc" secondAttribute="bottom" id="nTK-5j-ZfD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8hi-7c-tSc"/>
                     </view>
                     <connections>
                         <outlet property="arScene" destination="hfB-xL-3BO" id="cuv-at-Q6f"/>
-                        <outlet property="locationLabel" destination="H0w-FA-dFb" id="UIQ-r5-UQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Um-rZ-Adb" userLabel="First Responder" sceneMemberID="firstResponder"/>
