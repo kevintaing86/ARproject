@@ -19,7 +19,6 @@
 		A1A2CED51F69A5BB00BFCAAA /* GeoCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A2CED41F69A5BB00BFCAAA /* GeoCache.swift */; };
 		A1D174CE1F677FE600EA675E /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D174CD1F677FE600EA675E /* MapView.storyboard */; };
 		A1D174D01F6780E500EA675E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D174CF1F6780E500EA675E /* MapViewController.swift */; };
-		A1D1C2FE1F97169F00E68575 /* arMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D1C2FD1F97169F00E68575 /* arMenu.swift */; };
 		A1D704041F7709CA0025BB36 /* ARView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D704031F7709CA0025BB36 /* ARView.storyboard */; };
 		A1D704071F772CEA0025BB36 /* AnnotationPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */; };
 		A1D704091F772F1E0025BB36 /* AnnotationPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */; };
@@ -42,7 +41,6 @@
 		A1A2CED41F69A5BB00BFCAAA /* GeoCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCache.swift; sourceTree = "<group>"; };
 		A1D174CD1F677FE600EA675E /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		A1D174CF1F6780E500EA675E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A1D1C2FD1F97169F00E68575 /* arMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arMenu.swift; sourceTree = "<group>"; };
 		A1D704031F7709CA0025BB36 /* ARView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARView.storyboard; sourceTree = "<group>"; };
 		A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationPopoverView.xib; sourceTree = "<group>"; };
 		A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPopoverView.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				A1D704061F772CEA0025BB36 /* AnnotationPopoverView.xib */,
 				A1D704081F772F1E0025BB36 /* AnnotationPopoverView.swift */,
 				A1DAD3DC1F89638300D817A2 /* Capsule.swift */,
-				A1D1C2FD1F97169F00E68575 /* arMenu.swift */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -236,7 +233,6 @@
 				A15459BE1F7B5F57006B9CC0 /* ARViewController.swift in Sources */,
 				A13842631F6DC07800353C0F /* MapViewControllerExtension.swift in Sources */,
 				A1D704091F772F1E0025BB36 /* AnnotationPopoverView.swift in Sources */,
-				A1D1C2FE1F97169F00E68575 /* arMenu.swift in Sources */,
 				A1A2CED51F69A5BB00BFCAAA /* GeoCache.swift in Sources */,
 				A10C6E8C1F64B2A900889650 /* HomeViewController.swift in Sources */,
 			);
