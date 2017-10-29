@@ -13,9 +13,12 @@ import ARKit
 @available(iOS 11.0, *)
 class ARViewController: UIViewController, UserLocationDelegate{
     
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var arScene: ARSCNView!
     @IBOutlet var arMenu: UIView!
+    var capsuleLocation: CLLocation!
     var userLocation: CLLocation = CLLocation()
+    var prevDistanceFromCapsule: Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +78,7 @@ class ARViewController: UIViewController, UserLocationDelegate{
     
     func updateUserLocation(newLocation: CLLocation) {
         userLocation = newLocation
-        print("hi")
+        setLocationLabel()
     }
     
     func openModal() {
@@ -90,6 +93,23 @@ class ARViewController: UIViewController, UserLocationDelegate{
             self.arMenu.transform = CGAffineTransform.identity
         }
     }
-
+    
+    
+    func setLocationLabel() {
+        let distanceInMeters = userLocation.distance(from: capsuleLocation)
+        
+        if (distanceInMeters < 2) {
+            locationLabel.text = "Ok! Start looking for it!"
+        }
+        else if (distanceInMeters < prevDistanceFromCapsule) {
+            locationLabel.text = "Getting warmer..."
+        }
+        
+        else {
+            locationLabel.text = "Getting colder..."
+        }
+        
+        prevDistanceFromCapsule = distanceInMeters
+    }
     
 }

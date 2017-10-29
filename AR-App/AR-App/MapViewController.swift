@@ -42,6 +42,16 @@ class MapViewController: UIViewController, AnnotationPopoverDelegate, CLLocation
         centerMapAtLocation(location: userLocation, with: regionRadius)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toARView"){
+            self.arDelegate = segue.destination as! ARViewController
+            
+            (segue.destination as! ARViewController).capsuleLocation = CLLocation(latitude: CLLocationDegrees(33.5875), longitude: CLLocationDegrees(-101.8757))
+            
+            (segue.destination as! ARViewController).prevDistanceFromCapsule = self.userLocation.distance(from: CLLocation(latitude: CLLocationDegrees(33.5875), longitude: CLLocationDegrees(-101.8757)))
+        }
+    }
+    
     func centerMapAtLocation(location: CLLocation, with regionRadius: CLLocationDistance) {
         let coordinateLocation = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         
