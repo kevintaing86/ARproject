@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10319701FAE409200328B60 /* openCapsuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103196F1FAE409200328B60 /* openCapsuleViewController.swift */; };
 		A10C6E8C1F64B2A900889650 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C6E8B1F64B2A900889650 /* HomeViewController.swift */; };
 		A10EEA531F82B22A00C03EBA /* capsule.scn in Resources */ = {isa = PBXBuildFile; fileRef = A10EEA521F82B22A00C03EBA /* capsule.scn */; };
 		A13842631F6DC07800353C0F /* MapViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13842621F6DC07800353C0F /* MapViewControllerExtension.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A103196F1FAE409200328B60 /* openCapsuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openCapsuleViewController.swift; sourceTree = "<group>"; };
 		A10C6E8B1F64B2A900889650 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A10EEA521F82B22A00C03EBA /* capsule.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = capsule.scn; sourceTree = "<group>"; };
 		A13842621F6DC07800353C0F /* MapViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				A10C6E8B1F64B2A900889650 /* HomeViewController.swift */,
 				A1D174CF1F6780E500EA675E /* MapViewController.swift */,
 				A15459BD1F7B5F57006B9CC0 /* ARViewController.swift */,
+				A103196F1FAE409200328B60 /* openCapsuleViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				A1D174D01F6780E500EA675E /* MapViewController.swift in Sources */,
 				A15459BE1F7B5F57006B9CC0 /* ARViewController.swift in Sources */,
 				A13842631F6DC07800353C0F /* MapViewControllerExtension.swift in Sources */,
+				A10319701FAE409200328B60 /* openCapsuleViewController.swift in Sources */,
 				A1D704091F772F1E0025BB36 /* AnnotationPopoverView.swift in Sources */,
 				A1A2CED51F69A5BB00BFCAAA /* GeoCache.swift in Sources */,
 				A10C6E8C1F64B2A900889650 /* HomeViewController.swift in Sources */,
