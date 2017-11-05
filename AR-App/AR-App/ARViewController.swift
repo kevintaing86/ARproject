@@ -40,6 +40,7 @@ class ARViewController: UIViewController, UserLocationDelegate{
     }
     
     @IBAction func openCapsule(_ sender: Any) {
+        performSegue(withIdentifier: "toOpenCapsule", sender: nil)
     }
     
     @IBAction func dismissModal(_ sender: Any) {

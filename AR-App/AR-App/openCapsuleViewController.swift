@@ -15,16 +15,20 @@ class openCapsuleViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var addNameButtom: UIButton!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    var blur: UIVisualEffect!
+    @IBOutlet weak var blurView: UIVisualEffectView!
     var listOfNames = ["John Smith", "Jane Doe"] // will replace with actual names once DB is setup
     
     @IBAction func addName(_ sender: Any) {
+        //self.view.addSubview(blurView)
         self.view.addSubview(popoverView)
-        popoverView.center = self.view.center
+        popoverView.center = CGPoint(x: 160, y: 100)
         
         popoverView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         popoverView.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
+            self.blurView.effect = self.blur
             self.popoverView.alpha = 1
             self.popoverView.transform = CGAffineTransform.identity
         }
@@ -45,6 +49,12 @@ class openCapsuleViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        popoverView.layer.cornerRadius = 5
+        addNameButtom.layer.cornerRadius = 5
+        
+        blur = blurView.effect
+        blurView.effect = nil
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,6 +74,7 @@ class openCapsuleViewController: UIViewController, UITableViewDelegate, UITableV
             self.popoverView.alpha = 1
         }) { ( success: Bool ) in
             self.popoverView.removeFromSuperview()
+            //self.blurView.removeFromSuperview()
         }
     }
 }
