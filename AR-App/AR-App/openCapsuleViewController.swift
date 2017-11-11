@@ -37,9 +37,9 @@ class openCapsuleViewController: UIViewController, UITableViewDelegate, UITableV
         var name: String
         if let name = nameField.text {
             listOfNames.append(name)
+            nameField.text = ""
             self.tableView.reloadData()
         }
-        
         dismissModal()
     }
     @IBAction func closePopover(_ sender: Any) {
