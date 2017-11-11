@@ -37,6 +37,7 @@ class ARViewController: UIViewController, UserLocationDelegate{
         arScene.session.run(configuration)
         
         loadCapsule()
+        updateUserLocation(newLocation: nil)
     }
     
     @IBAction func openCapsule(_ sender: Any) {
@@ -77,9 +78,14 @@ class ARViewController: UIViewController, UserLocationDelegate{
         return Float(arc4random()) / Float(UInt32.max) * (lower - upper) + upper
     }
     
-    func updateUserLocation(newLocation: CLLocation) {
-        userLocation = newLocation
-        setLocationLabel()
+    func updateUserLocation(newLocation: CLLocation?) {
+        if let newUserLocation = newLocation {
+            self.userLocation = newUserLocation
+            setLocationLabelHints()
+        }
+        else {
+            self.locationLabel.text = "Start moving!"
+        }
     }
     
     func openModal() {
@@ -96,7 +102,7 @@ class ARViewController: UIViewController, UserLocationDelegate{
     }
     
     
-    func setLocationLabel() {
+    func setLocationLabelHints() {
         let distanceInMeters = userLocation.distance(from: capsuleLocation)
         
         if (distanceInMeters < 2) {
@@ -105,7 +111,6 @@ class ARViewController: UIViewController, UserLocationDelegate{
         else if (distanceInMeters < prevDistanceFromCapsule) {
             locationLabel.text = "Getting warmer..."
         }
-        
         else {
             locationLabel.text = "Getting colder..."
         }
