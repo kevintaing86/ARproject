@@ -36,7 +36,6 @@ class ARViewController: UIViewController, UserLocationDelegate{
         let configuration = ARWorldTrackingConfiguration()
         arScene.session.run(configuration)
         
-        loadCapsule()
         updateUserLocation(newLocation: nil)
     }
     
@@ -105,14 +104,19 @@ class ARViewController: UIViewController, UserLocationDelegate{
     func setLocationLabelHints() {
         let distanceInMeters = userLocation.distance(from: capsuleLocation)
         
-        if (distanceInMeters < 2) {
+        if (distanceInMeters < 3) {
             locationLabel.text = "Ok! Start looking for it!"
+            loadCapsule()
         }
         else if (distanceInMeters < prevDistanceFromCapsule) {
             locationLabel.text = "Getting warmer..."
         }
-        else {
+        else if (distanceInMeters > prevDistanceFromCapsule) {
             locationLabel.text = "Getting colder..."
+        }
+        
+        else {
+            locationLabel.text = "Keep moving!"
         }
         
         prevDistanceFromCapsule = distanceInMeters
