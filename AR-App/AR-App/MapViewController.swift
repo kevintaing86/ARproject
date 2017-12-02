@@ -13,7 +13,7 @@ import CoreLocation
 
 // This is used to send user location data to another view controller
 protocol UserLocationDelegate: class {
-    func updateUserLocation(newLocation: CLLocation)
+    func updateUserLocation(newLocation: CLLocation?)
 }
 
 class MapViewController: UIViewController, AnnotationPopoverDelegate, CLLocationManagerDelegate {
@@ -21,6 +21,7 @@ class MapViewController: UIViewController, AnnotationPopoverDelegate, CLLocation
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     var userLocation = CLLocation()
+    var arTrackingLocation: CLLocation?
     var arDelegate: UserLocationDelegate?
     
     override func viewDidLoad() {
@@ -42,6 +43,16 @@ class MapViewController: UIViewController, AnnotationPopoverDelegate, CLLocation
         centerMapAtLocation(location: userLocation, with: regionRadius)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toARView"){
+            self.arDelegate = segue.destination as! ARViewController
+            
+            (segue.destination as! ARViewController).capsuleLocation = CLLocation(latitude: CLLocationDegrees(33.5875), longitude: CLLocationDegrees(-101.8757))
+            
+            (segue.destination as! ARViewController).prevDistanceFromCapsule = self.userLocation.distance(from: CLLocation(latitude: CLLocationDegrees(33.5875), longitude: CLLocationDegrees(-101.8757)))
+        }
+    }
+    
     func centerMapAtLocation(location: CLLocation, with regionRadius: CLLocationDistance) {
         let coordinateLocation = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         
@@ -53,9 +64,17 @@ class MapViewController: UIViewController, AnnotationPopoverDelegate, CLLocation
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let currentLocation = locations[0]
-        self.userLocation = currentLocation
+        self.userLocation = locations[0]
         
-        self.arDelegate?.updateUserLocation(newLocation: currentLocation)
+        if self.arTrackingLocation != nil {
+            // defer updating ar location until user moves at least 0.8 meters
+            if locations[0].distance(from: self.arTrackingLocation!) >= 0.8 {
+                self.arTrackingLocation = locations[0]
+                self.arDelegate?.updateUserLocation(newLocation: self.arTrackingLocation!)
+            }
+        }
+        else {
+            self.arTrackingLocation = locations[0]
+        }
     }
 }
